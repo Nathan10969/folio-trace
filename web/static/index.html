@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FolioTrace · 文献问答</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>FolioTrace · 文献问答</h1>
+        <p>阅读文献，追踪每一条证据。</p>
+      </div>
+      <span id="serviceStatus" class="status-pill">ready</span>
+    </header>
+
+    <main class="layout">
+      <section class="panel side-panel">
+        <h2>文档</h2>
+        <form id="uploadForm" class="upload-form">
+          <input id="fileInput" type="file" accept=".pdf,.txt,.md,.markdown" multiple />
+          <button type="submit">上传并处理</button>
+        </form>
+        <div id="docList" class="doc-list"></div>
+        <p id="selectionSummary" class="selection-summary">未选择文档</p>
+      </section>
+
+      <section class="panel main-panel">
+        <h2>问答</h2>
+        <form id="chatForm" class="chat-form">
+          <textarea id="questionInput" rows="4" placeholder="上传并勾选文档后在这里提问"></textarea>
+          <button id="askButton" type="submit" disabled>提问</button>
+        </form>
+
+        <section class="answer-box">
+          <div class="answer-meta">
+            <span id="modeTag">mode: -</span>
+            <span id="answerTypeTag">answer_type: -</span>
+          </div>
+          <div id="answerText" class="answer-text">等待提问。</div>
+        </section>
+
+        <section>
+          <h3>证据</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>文件</th>
+                <th>页码</th>
+                <th>片段</th>
+                <th>source_id</th>
+                <th>evidence_id</th>
+                <th>quote_source</th>
+              </tr>
+            </thead>
+            <tbody id="evidenceBody"></tbody>
+          </table>
+        </section>
+
+        <details class="debug-panel">
+          <summary>调试信息</summary>
+          <pre id="debugText">{}</pre>
+        </details>
+      </section>
+    </main>
+
+    <script src="/static/app_state.js?v=20260710-ocr-queue"></script>
+    <script src="/static/app.js?v=20260710-ocr-queue"></script>
+  </body>
+</html>

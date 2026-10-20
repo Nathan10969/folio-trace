@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">FolioTrace：从两个入口到文档分析与页级证据</title>
+  <desc id="desc">依据现有代码绘制的架构示意图。本地上传经文本接入或后台 OCR，平台则读取已有 OCR 目录；两者共享文档数据约定，经直接上下文或 RLM 与 Map-Reduce 分析后返回回答与证据。平台另有流式响应及 SQLite 会话记忆。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#50765f"/></marker>
+    <marker id="blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#497da5"/></marker>
+  </defs>
+  <rect width="1280" height="800" rx="20" fill="#faf6ea"/>
+  <rect x="0" y="0" width="10" height="800" rx="5" fill="#225b43"/>
+  <g font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="42" y="45" font-size="12" font-weight="600" letter-spacing="3" fill="#4f765c">FOLIOTRACE / HOW IT WORKS</text>
+    <text x="42" y="94" font-size="33" font-weight="600" fill="#183c2d">把阅读、分析和原文依据连接起来</text>
+    <text x="42" y="126" font-size="16" fill="#64715b">两个入口，共享文档与证据的数据约定；各自处理输入、响应与对话。</text>
+    <path d="M42 153H1236" stroke="#ccd2bb"/>
+    <g font-weight="600">
+      <text x="42" y="195" font-family="Georgia, serif" font-size="29" fill="#2f7855">01</text>
+      <text x="88" y="193" font-size="18" fill="#244d38">输入文档</text>
+      <text x="408" y="195" font-family="Georgia, serif" font-size="29" fill="#aa7c24">02</text>
+      <text x="455" y="193" font-size="18" fill="#6f582c">整理与分析</text>
+      <text x="879" y="195" font-family="Georgia, serif" font-size="29" fill="#bd6350">03</text>
+      <text x="926" y="193" font-size="18" fill="#764235">回答与复核</text>
+    </g>
+    <rect x="42" y="222" width="310" height="167" rx="9" fill="#e7efde" stroke="#a4c5a4"/>
+    <rect x="42" y="222" width="7" height="167" rx="3" fill="#3f8a5b"/>
+    <text x="64" y="253" font-size="12" font-weight="600" letter-spacing="1.8" fill="#41764d">LOCAL CONSOLE</text>
+    <text x="64" y="286" font-size="22" font-weight="600" fill="#1e5034">本地上传与处理</text>
+    <text x="64" y="317" font-size="16" fill="#496348">TXT / Markdown → 文本接入</text>
+    <text x="64" y="344" font-size="16" fill="#496348">PDF → 后台 GLM OCR 任务</text>
+    <text x="64" y="371" font-size="13" fill="#577252">http_app.py</text>
+    <rect x="42" y="423" width="310" height="167" rx="9" fill="#e1edf5" stroke="#adc9db"/>
+    <rect x="42" y="423" width="7" height="167" rx="3" fill="#558bb2"/>
+    <text x="64" y="454" font-size="12" font-weight="600" letter-spacing="1.8" fill="#4d7693">PLATFORM API</text>
+    <text x="64" y="487" font-size="22" font-weight="600" fill="#2a526c">读取已有 OCR 产物</text>
+    <text x="64" y="518" font-size="16" fill="#4e6c7c">目录校验 → 内容指纹 → 缓存</text>
+    <text x="64" y="545" font-size="16" fill="#4e6c7c">页级文本 / 表格 / 公式</text>
+    <text x="64" y="572" font-size="13" fill="#597e96">platform_http_app.py</text>
+    <path d="M352 306H378V307H408" fill="none" stroke="#50765f" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M352 506H378V354H408" fill="none" stroke="#497da5" stroke-width="2" marker-end="url(#blue-arrow)"/>
+    <rect x="408" y="222" width="412" height="167" rx="9" fill="#f4e7b7" stroke="#d8c48a"/>
+    <text x="433" y="253" font-size="12" font-weight="600" letter-spacing="1.8" fill="#84672c">SHARED DOCUMENT CONTRACTS</text>
+    <text x="433" y="286" font-size="22" font-weight="600" fill="#5c4b28">可读取、可定位的文档材料</text>
+    <text x="433" y="319" font-size="16" fill="#786739">页 → 文本块 → 上下文包</text>
+    <path d="M433 336H795" stroke="#d7c58c"/>
+    <text x="433" y="363" font-size="16" fill="#786739">文档概况 · 原文片段 · 证据 ID</text>
+    <path d="M614 389V423" fill="none" stroke="#50765f" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="408" y="423" width="412" height="167" rx="9" fill="#194d3d"/>
+    <text x="433" y="454" font-size="12" font-weight="600" letter-spacing="1.8" fill="#a4dcaf">DOCUMENT ANALYSIS</text>
+    <text x="433" y="487" font-size="20" font-weight="600" fill="#fff5de">Direct：直接使用文档上下文</text>
+    <text x="433" y="522" font-size="20" font-weight="600" fill="#fff5de">RLM / Map-Reduce：分读再综合</text>
+    <text x="433" y="554" font-size="15" fill="#b9d4bd">上下文包 → 阅读草稿 + 证据 → 综合</text>
+    <text x="433" y="577" font-size="13" fill="#e1c679">文档工具 · REPL · 嵌套调用 · 轨迹日志</text>
+    <path d="M820 506H850V306H879" fill="none" stroke="#50765f" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="879" y="222" width="357" height="367" rx="9" fill="#fffaf0" stroke="#d9bbaa"/>
+    <path d="M888 222H1227Q1236 222 1236 231V230H879V231Q879 222 888 222Z" fill="#cf775d"/>
+    <text x="902" y="257" font-size="12" font-weight="600" letter-spacing="1.8" fill="#ae604d">INSPECTABLE ANSWERS</text>
+    <text x="902" y="291" font-size="24" font-weight="600" fill="#5d392d">回答 + 原文依据</text>
+    <rect x="902" y="314" width="311" height="47" rx="4" fill="#f7dfc9"/>
+    <text x="917" y="344" font-size="17" font-weight="600" fill="#86513c">文件 · 页码 · 引文 · 证据 ID</text>
+    <path d="M902 385H1213" stroke="#dfc8b7"/>
+    <circle cx="908" cy="414" r="5" fill="#4a8a5a"/>
+    <text x="924" y="420" font-size="17" fill="#36553a">本地：完整 JSON + 页面证据表</text>
+    <circle cx="908" cy="455" r="5" fill="#558bb2"/>
+    <text x="924" y="461" font-size="17" fill="#3c637b">平台：JSON 或 SSE + 引用注解</text>
+    <path d="M902 484H1213" stroke="#dfc8b7"/>
+    <text x="902" y="517" font-size="17" font-weight="600" fill="#496a81">平台会话记忆</text>
+    <text x="902" y="546" font-size="15" fill="#66787c">SQLite · 按 chat_id 保存完成的问答</text>
+    <text x="902" y="571" font-size="13" fill="#8b7865">引用帮助检查来源，仍需核对结论。</text>
+    <path d="M42 625H1236" stroke="#ccd2bb"/>
+    <text x="42" y="660" font-size="12" font-weight="600" letter-spacing="2" fill="#57765a">CONFIGURABLE EXECUTION</text>
+    <rect x="42" y="680" width="338" height="73" rx="6" fill="#edf0df"/>
+    <text x="59" y="706" font-size="14" font-weight="600" fill="#4a6846">Map 执行方式</text>
+    <text x="59" y="732" font-family="monospace" font-size="15" fill="#657652">staged / pipelined / one_pass</text>
+    <rect x="397" y="680" width="283" height="73" rx="6" fill="#f2e8c9"/>
+    <text x="414" y="706" font-size="14" font-weight="600" fill="#806630">Reduce 上下文方式</text>
+    <text x="414" y="732" font-family="monospace" font-size="15" fill="#8d773d">expanded / compact</text>
+    <rect x="697" y="680" width="539" height="73" rx="6" fill="#eee5dd"/>
+    <text x="714" y="706" font-size="14" font-weight="600" fill="#8a6150">模型调用管理</text>
+    <text x="714" y="732" font-size="15" fill="#8e7363">角色路由 · 密钥租用 · 重试与冷却 · 请求准入</text>
+    <text x="42" y="782" font-size="11" letter-spacing="1" fill="#7b8670">CODE-BASED ARCHITECTURE ILLUSTRATION · 图中模块对应 src/rlm_qa 与 src/rlm_runtime</text>
+  </g>
+</svg>

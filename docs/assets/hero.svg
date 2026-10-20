@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">FolioTrace — 阅读文献，追踪每一条证据</title>
+  <desc id="desc">项目概念封面。翡翠绿底色上的文档、彩色索引和证据连线，表示从文件、页码到原文片段的核对路径。这是插画，不是应用截图。</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#446a61" stroke-width="0.7"/></pattern>
+  </defs>
+  <rect width="1280" height="520" rx="24" fill="#103d34"/>
+  <path d="M730 0H1256Q1280 0 1280 24V496Q1280 520 1256 520H730Z" fill="#164a40"/>
+  <rect x="730" width="550" height="520" fill="url(#grid)" opacity="0.55"/>
+  <path d="M730 0V520" stroke="#4b7668" stroke-dasharray="3 8"/>
+  <circle cx="1200" cy="45" r="145" fill="none" stroke="#d9ab43" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="1200" cy="45" r="176" fill="none" stroke="#88ba9f" opacity="0.3"/>
+  <g font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <g transform="translate(56 48)" fill="none" stroke="#8ee4b3" stroke-width="2.5">
+      <path d="M0 0H24L36 12V46H0Z"/>
+      <path d="M24 0V12H36M8 24H28M8 32H24"/>
+    </g>
+    <text x="110" y="67" font-size="13" font-weight="600" letter-spacing="3" fill="#9ae2bb">DOCUMENT QUESTION ANSWERING</text>
+    <text x="110" y="91" font-size="13" letter-spacing="2" fill="#d4c497">RLM · PAGE EVIDENCE · MULTI-DOCUMENT</text>
+    <text x="52" y="194" font-family="Georgia, 'Times New Roman', serif" font-size="90" fill="#fff8e9">FolioTrace</text>
+    <text x="58" y="255" font-size="31" font-weight="600" fill="#b6edc9">阅读文献，追踪每一条证据。</text>
+    <text x="58" y="302" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-style="italic" fill="#e4d5ae">Read deeply. Cite precisely.</text>
+    <path d="M58 343H644" stroke="#56806d"/>
+    <text x="58" y="382" font-size="16" fill="#e1ebe0">让回答连接到文件、页码与原文片段</text>
+    <g font-size="13" font-weight="600" letter-spacing="1">
+      <circle cx="64" cy="434" r="5" fill="#f4c65b"/>
+      <text x="80" y="439" fill="#f5dc9d">上传文档</text>
+      <path d="M166 434H204" stroke="#749586"/><path d="M198 430L204 434L198 438" fill="none" stroke="#749586"/>
+      <circle cx="225" cy="434" r="5" fill="#ee8e79"/>
+      <text x="241" y="439" fill="#f6b4a4">选择并提问</text>
+      <path d="M341 434H379" stroke="#749586"/><path d="M373 430L379 434L373 438" fill="none" stroke="#749586"/>
+      <circle cx="400" cy="434" r="5" fill="#81b9e5"/>
+      <text x="416" y="439" fill="#acd5f4">核对依据</text>
+    </g>
+    <text x="58" y="489" font-size="12" letter-spacing="1.2" fill="#a0bfb0">PYTHON 3.11+  /  FASTAPI  /  LOCAL CONSOLE + PLATFORM API</text>
+  </g>
+  <g transform="translate(808 74) rotate(-7 140 180)">
+    <rect x="-18" y="25" width="286" height="343" rx="5" fill="#357467" stroke="#85ad94"/>
+    <rect x="-8" y="13" width="286" height="343" rx="5" fill="#c3d9bc"/>
+    <rect width="286" height="343" rx="5" fill="#fff8e8"/>
+    <rect x="232" y="-8" width="37" height="70" rx="3" fill="#e78470"/>
+    <path d="M243 8V33L250 27L257 33V8" fill="none" stroke="#fff3dc" stroke-width="2"/>
+    <g font-family="Georgia, 'Times New Roman', serif" fill="#153f35">
+      <text x="26" y="35" font-family="sans-serif" font-size="11" letter-spacing="2.5">RESEARCH NOTES</text>
+      <text x="26" y="73" font-size="25">Follow the source.</text>
+      <path d="M26 100H252M26 116H229M26 132H244M26 148H186" fill="none" stroke="#c0c8ad" stroke-width="4"/>
+      <rect x="20" y="171" width="246" height="53" fill="#f8d779"/>
+      <path d="M32 189H248M32 207H216" stroke="#936c25" stroke-width="4"/>
+      <path d="M13 171H7V224H13M274 171H280V224H274" fill="none" stroke="#ce6d57" stroke-width="2"/>
+      <path d="M26 251H237M26 267H212" stroke="#c0c8ad" stroke-width="4"/>
+      <path d="M26 288H260" stroke="#c4cbb1"/>
+      <text x="26" y="319" font-family="sans-serif" font-size="11" letter-spacing="1.7">DOCUMENT A</text>
+      <text x="226" y="321" font-size="24">07</text>
+    </g>
+  </g>
+  <path d="M1072 240C1128 240 1100 166 1156 166" fill="none" stroke="#86bfe4" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M1075 290C1116 290 1106 362 1154 362" fill="none" stroke="#efad8d" stroke-width="2" stroke-dasharray="5 5"/>
+  <g transform="translate(1110 126)" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect width="140" height="84" rx="6" fill="#b7daf0"/>
+    <rect width="5" height="84" fill="#5a9dcc"/>
+    <text x="17" y="27" font-size="12" font-weight="600" fill="#1a4660">FILE + PAGE</text>
+    <text x="17" y="53" font-size="19" font-weight="600" fill="#143c51">来源定位</text>
+    <text x="17" y="72" font-size="11" fill="#3c6578">文档 · 页码</text>
+  </g>
+  <g transform="translate(1101 326)" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect width="149" height="84" rx="6" fill="#f3b29a"/>
+    <rect width="5" height="84" fill="#cf6b52"/>
+    <text x="17" y="27" font-size="12" font-weight="600" fill="#6e352c">QUOTE + ID</text>
+    <text x="17" y="53" font-size="19" font-weight="600" fill="#642f29">核对原文</text>
+    <text x="17" y="72" font-size="11" fill="#81483b">片段 · 证据 ID</text>
+  </g>
+  <g transform="translate(776 420)">
+    <circle r="39" fill="#edc359"/>
+    <circle r="31" fill="none" stroke="#725a26"/>
+    <path d="M-15 -1L-5 10L16 -13" fill="none" stroke="#4e542c" stroke-width="4"/>
+  </g>
+  <text x="833" y="463" font-family="sans-serif" font-size="11" letter-spacing="2.5" fill="#b5cbb6">DOCUMENTS → ANSWERS → EVIDENCE</text>
+</svg>

@@ -1,0 +1,20 @@
+[Unit]
+Description=FolioTrace platform document QA
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Create this unprivileged user and checkout before enabling the unit.
+User=foliotrace
+Group=foliotrace
+WorkingDirectory=/opt/folio-trace
+EnvironmentFile=/opt/folio-trace/.env
+ExecStart=/opt/folio-trace/.venv/bin/python -m uvicorn rlm_qa.platform_http_app:app --host 127.0.0.1 --port 8788
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=360
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

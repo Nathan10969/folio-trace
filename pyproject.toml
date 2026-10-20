@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "folio-trace"
+version = "0.1.0"
+description = "Document question answering with RLM analysis and traceable page evidence."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Nathan10969"}]
+keywords = ["rlm", "document-qa", "literature", "ocr", "citations"]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+  "pydantic>=2.7,<3",
+  "python-multipart>=0.0.12",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1.2"]
+
+[project.urls]
+Repository = "https://github.com/Nathan10969/folio-trace"
+Issues = "https://github.com/Nathan10969/folio-trace/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rlm_qa", "src/rlm_runtime"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"web/static" = "rlm_qa/static"
+"THIRD_PARTY_NOTICES.md" = "rlm_runtime/THIRD_PARTY_NOTICES.md"
+"licenses/rlm-MIT.txt" = "rlm_runtime/licenses/rlm-MIT.txt"
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/web", "/docs", "/examples", "/deploy", "/licenses", "/README.md", "/LICENSE", "/THIRD_PARTY_NOTICES.md", "/.env.example", "/pyproject.toml", "/pytest.ini"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
